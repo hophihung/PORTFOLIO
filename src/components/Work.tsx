@@ -56,6 +56,45 @@ const projects = [
     imageFirst: false,
     caseStudyPath: '/work/japalyze',
   },
+  {
+    tags: [
+      { label: 'Education', class: 'bg-blue-500/10 text-blue-400' },
+      { label: 'Next.js', class: 'bg-cyan-500/10 text-cyan-400' },
+      { label: 'Quiz Engine', class: 'bg-amber-500/10 text-amber-400' },
+    ],
+    title: 'F-IELTS',
+    description:
+      'Website luyện thi IELTS toàn diện với kho đề thi cập nhật, giao diện thi thử mô phỏng thực tế và chấm điểm tự động. Tech: Next.js, TypeScript, Tailwind CSS, Vercel.',
+    bullets: [
+      'Mô phỏng giao diện thi Computer-based IELTS',
+      'Tính năng bấm giờ (Timer) và tính điểm Band Score tự động',
+      'Tối ưu hóa SEO và tốc độ tải trang với Next.js',
+    ],
+    image:
+      "url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80')",
+    imageFirst: true,
+    caseStudyPath: '/work/f-ielts',
+  },
+  {
+    tags: [
+      { label: 'E-commerce', class: 'bg-green-500/10 text-green-400' },
+      { label: 'React', class: 'bg-sky-500/10 text-sky-400' },
+      { label: 'TypeScript', class: 'bg-blue-500/10 text-blue-400' },
+      { label: 'Vite', class: 'bg-amber-500/10 text-amber-400' },
+    ],
+    title: 'CellphoneS E-commerce Clone',
+    description:
+      'Giao diện web thương mại điện tử mô phỏng CellphoneS với tốc độ tải cực nhanh nhờ Vite. Tích hợp đăng nhập Google và quản lý giỏ hàng. Tech: React, TypeScript, Vite, ESLint Strict Typing.',
+    bullets: [
+      'Xây dựng giao diện Pixel-perfect theo thiết kế gốc',
+      'Tích hợp Google OAuth (Login) và kết nối RESTful API',
+      'Tối ưu hiệu suất với Vite & TypeScript',
+    ],
+    image:
+      "url('https://images.unsplash.com/photo-1592286927505-d6d2a8b5c87a?w=1200&q=80')",
+    imageFirst: false,
+    caseStudyPath: '/work/cellphones-clone',
+  },
 ]
 
 export default function Work() {
