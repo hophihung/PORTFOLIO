@@ -3,17 +3,20 @@ import { Link } from 'react-router-dom'
 const projects = [
   {
     tags: [
-      { label: 'Fintech', class: 'bg-blue-500/10 text-blue-400' },
-      { label: 'Mobile App', class: 'bg-purple-500/10 text-purple-400' },
+      { label: 'Education', class: 'bg-blue-500/10 text-blue-400' },
+      { label: 'Next.js', class: 'bg-purple-500/10 text-purple-400' },
     ],
-    title: 'Nova Finance',
+    title: 'Japanese Learning App',
     description:
-      'A comprehensive financial management app designed to help millennials track spending, invest, and save for future goals.',
-    bullets: ['Increased user retention by 40%', 'Simplified onboarding flow'],
+      'Ứng dụng học tiếng Nhật thông minh, hỗ trợ luyện tập từ vựng và ngữ pháp với lộ trình cá nhân hóa. Tech: React, Tailwind CSS, Supabase.',
+    bullets: [
+      'Hệ thống Flashcards thông minh (SRS)',
+      'Bài tập trắc nghiệm ngữ pháp JLPT',
+    ],
     image:
-      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLT1Cwuczfb5Y0WB8RQCHVI5FeKQDddBOpjcuKKZ11oyVee6v7T2ehsest2ynO-8pzcgdJuYR7W3q-olcJjD8efPC0HNcNmLPHe4MwqcKde1fPiKsCVijirXarXUqDCUBurNG2AKyZiyhy29YRcZ83Uj81LOzh_1KD9yfTnUu8Eq8Idb_RkRGeJxQValjcEeEbB13ozantrGbx6r5Obq8xq-bpw6o5DDoNu5QqZIiA1YE4ularBwwUetFu9YVclFCbiG7Rn55aF8k')",
+      "url('https://images.unsplash.com/photo-1528164344705-47542687000d?w=1200&q=80')",
     imageFirst: false,
-    caseStudyPath: '/work/fintech-dashboard',
+    caseStudyPath: '/work/japanese-learning-app',
   },
   {
     tags: [
