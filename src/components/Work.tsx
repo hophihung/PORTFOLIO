@@ -20,16 +20,22 @@ const projects = [
   },
   {
     tags: [
-      { label: 'SaaS', class: 'bg-green-500/10 text-green-400' },
-      { label: 'Dashboard', class: 'bg-orange-500/10 text-orange-400' },
+      { label: 'E-commerce', class: 'bg-green-500/10 text-green-400' },
+      { label: 'Next.js 16', class: 'bg-emerald-500/10 text-emerald-400' },
+      { label: 'Supabase', class: 'bg-teal-500/10 text-teal-400' },
     ],
-    title: 'Vortex Analytics',
+    title: 'Ong Hut Co Bang',
     description:
-      'An enterprise-grade analytics dashboard tailored for marketing teams to visualize campaign performance in real-time.',
-    bullets: ['Custom data visualization library', 'Dark/Light mode system'],
+      'Hệ thống thương mại điện tử hiện đại bán ống hút cỏ bàng. Next.js 16 App Router kết hợp Supabase quản lý dữ liệu và xác thực. Tech: Next.js 16, TypeScript, Tailwind, Supabase.',
+    bullets: [
+      'Tích hợp cổng thanh toán PayOS (QR Code)',
+      'Đăng nhập Google OAuth qua Supabase',
+      'Quản lý giỏ hàng & Realtime Database',
+    ],
     image:
-      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2VU2h1wqRUCkLRClY0GTHqi4xoW3ddaQQt2fY16qestzOzIBlI2Tj6dzX2HX0rBr0-WvvAqnluda9g3wTNMI4MiE0FxSRHh17e_rt-N6WgbekvMke4JQV0IQhUmA11ORfnvZyD1O9ROqfqHfYfd_BdFcbDbFLVD65SCYI4wSoywoNQbyOPQ8hU9TYONQ_nJEt5wR1bJv3Ch7vc-8mIrs2Zf3lJ_vEjjAHxR_9xWfkcNfbfYNWN1jSs1lZz_LFJcuCR3E1UF1bAAQ')",
+      "url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1200&q=80')",
     imageFirst: true,
+    caseStudyPath: '/work/ong-hut-co-bang',
   },
   {
     tags: [
