@@ -53,9 +53,43 @@ const jobs = [
   },
 ]
 
-const certifications = [
-  { name: 'Google UX Design Certificate', issuer: 'Coursera, 2021' },
-  { name: 'Certified Scrum Master (CSM)', issuer: 'Scrum Alliance, 2019' },
+const certificationsAndAwards = [
+  {
+    title: 'Google UX Design Certificate',
+    issuer: 'Coursera',
+    issued: 'Aug 2021',
+    icon: 'school',
+    iconColor: 'text-blue-500',
+    hoverIcon: 'verified',
+    linkLabel: 'Verify',
+  },
+  {
+    title: 'Apple Developer Academy',
+    issuer: 'Apple Inc.',
+    issued: 'June 2020',
+    icon: 'laptop_mac',
+    iconColor: 'text-slate-800 dark:text-slate-200',
+    hoverIcon: 'verified',
+    linkLabel: 'Verify',
+  },
+  {
+    title: 'Certified Scrum Master (CSM)',
+    issuer: 'Scrum Alliance',
+    issued: 'Mar 2019',
+    icon: 'groups',
+    iconColor: 'text-orange-500',
+    hoverIcon: 'verified',
+    linkLabel: 'Verify',
+  },
+  {
+    title: 'Site of the Day',
+    issuer: 'Awwwards',
+    issued: 'Dec 2022',
+    icon: 'emoji_events',
+    iconColor: 'text-yellow-500',
+    hoverIcon: 'emoji_events',
+    linkLabel: 'View',
+  },
 ]
 
 export default function Resume() {
@@ -271,48 +305,78 @@ export default function Resume() {
                 </div>
               </section>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <section>
-                  <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                    <span className="p-1 rounded bg-primary/10 text-primary">
-                      <span className="material-symbols-outlined text-xl">school</span>
-                    </span>
-                    Education
-                  </h2>
-                  <div className="space-y-4">
-                    <div className="bg-slate-50 dark:bg-[#15202b] p-4 rounded-lg border border-slate-100 dark:border-slate-700/50">
-                      <h3 className="font-bold text-slate-900 dark:text-white">B.F.A in Interaction Design</h3>
-                      <p className="text-sm text-slate-500 mt-1">Parsons School of Design</p>
-                      <p className="text-xs text-slate-400 mt-2">2011 - 2015</p>
+              <section>
+                <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                  <span className="p-1 rounded bg-primary/10 text-primary">
+                    <span className="material-symbols-outlined text-xl">school</span>
+                  </span>
+                  Education
+                </h2>
+                <div className="bg-slate-50 dark:bg-[#15202b] p-6 rounded-xl border border-slate-100 dark:border-slate-700/50 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div className="flex items-start gap-4">
+                    <div className="mt-1 p-2 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-400">
+                      <span className="material-symbols-outlined text-2xl">account_balance</span>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-slate-900 dark:text-white text-lg">B.F.A in Interaction Design</h3>
+                      <p className="text-slate-500 font-medium">Parsons School of Design</p>
+                      <p className="text-xs text-slate-400 mt-1">Dean&apos;s List 2013-2015</p>
                     </div>
                   </div>
-                </section>
-
-                <section>
-                  <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                    <span className="p-1 rounded bg-primary/10 text-primary">
-                      <span className="material-symbols-outlined text-xl">verified</span>
-                    </span>
-                    Certifications
-                  </h2>
-                  <div className="space-y-3">
-                    {certifications.map((cert) => (
-                      <div
-                        key={cert.name}
-                        className="flex items-start gap-3 p-3 rounded-lg border border-slate-100 dark:border-slate-700 hover:border-primary/30 transition-colors"
-                      >
-                        <div className="mt-0.5 text-primary">
-                          <span className="material-symbols-outlined text-lg">workspace_premium</span>
-                        </div>
-                        <div>
-                          <h4 className="text-sm font-bold text-slate-900 dark:text-white">{cert.name}</h4>
-                          <p className="text-xs text-slate-500">{cert.issuer}</p>
-                        </div>
-                      </div>
-                    ))}
+                  <div className="text-sm font-medium px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 text-slate-500 self-start md:self-center">
+                    2011 - 2015
                   </div>
-                </section>
-              </div>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                  <span className="p-1 rounded bg-primary/10 text-primary">
+                    <span className="material-symbols-outlined text-xl">workspace_premium</span>
+                  </span>
+                  Certifications &amp; Awards
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
+                  {certificationsAndAwards.map((item) => (
+                    <div
+                      key={item.title}
+                      className="group flex flex-col bg-slate-50 dark:bg-[#15202b] border border-slate-200 dark:border-slate-700 rounded-xl p-5 hover:border-primary transition-colors duration-300 relative overflow-hidden"
+                    >
+                      <div className="absolute top-0 right-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span className="material-symbols-outlined text-primary/20 text-6xl transform rotate-12 translate-x-2 -translate-y-2">
+                          {item.hoverIcon}
+                        </span>
+                      </div>
+                      <div className="flex items-start justify-between mb-4 z-10">
+                        <div
+                          className={`size-12 rounded-lg bg-white dark:bg-slate-800 flex items-center justify-center shadow-sm border border-slate-100 dark:border-slate-700 text-2xl ${item.iconColor}`}
+                        >
+                          <span className="material-symbols-outlined">{item.icon}</span>
+                        </div>
+                        <a
+                          href="#"
+                          className="text-slate-400 hover:text-primary transition-colors z-20"
+                          title={item.linkLabel === 'Verify' ? 'Verify Credential' : 'View Award'}
+                        >
+                          <span className="material-symbols-outlined">open_in_new</span>
+                        </a>
+                      </div>
+                      <div className="grow z-10">
+                        <h3 className="font-bold text-slate-900 dark:text-white mb-1 group-hover:text-primary transition-colors text-lg">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm text-slate-500 font-medium">{item.issuer}</p>
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700/50 flex items-center justify-between text-xs text-slate-400 z-10">
+                        <span>Issued: {item.issued}</span>
+                        <span className="flex items-center gap-1 text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                          {item.linkLabel} <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
             </div>
           </div>
         </div>
