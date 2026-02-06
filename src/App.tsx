@@ -6,6 +6,7 @@ import OngHutCoBangCaseStudy from './pages/OngHutCoBangCaseStudy'
 import JapalyzeCaseStudy from './pages/JapalyzeCaseStudy'
 import FIELTSCaseStudy from './pages/FIELTSCaseStudy'
 import CellphonesCaseStudy from './pages/CellphonesCaseStudy'
+import ClassStruggleCaseStudy from './pages/ClassStruggleCaseStudy'
 import Resume from './pages/Resume'
 import NotFound from './pages/NotFound'
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/work/japalyze" element={<JapalyzeCaseStudy />} />
       <Route path="/work/f-ielts" element={<FIELTSCaseStudy />} />
       <Route path="/work/cellphones-clone" element={<CellphonesCaseStudy />} />
+      <Route path="/work/class-struggle" element={<ClassStruggleCaseStudy />} />
       <Route path="/resume" element={<Resume />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
