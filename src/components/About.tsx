@@ -23,11 +23,11 @@ const skills = [
 
 export default function About() {
   return (
-    <section className="py-24 px-6 bg-[#0d141b]" id="about">
+    <section className="py-24 px-6 bg-slate-100 dark:bg-[#0d141b] transition-colors duration-200" id="about">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-2 mb-16">
           <h2 className="text-primary font-bold tracking-widest uppercase text-sm">About Me</h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h3 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
             Creative Thinker. <span className="text-slate-500">Problem Solver.</span>
           </h3>
         </div>
@@ -35,19 +35,19 @@ export default function About() {
           <div className="lg:col-span-5 relative mt-8 lg:mt-0">
             <div className="relative z-10 rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbVVf9DkhANqdHNc4rEQxmDNzlKlhjVMiv31DAN2nsZVuY5dXvno4FvWIMbXqB270xikTpYlWRyoh6pqZgoCYl-GNBX0LBWyBSHADpwIczwI17H3GOlSyOoghQC-PGwMuZpdXI-sz5VWSLytRyNwmiIj-MbRO0frplEdicg6LAUoOqEy9b6rr-TnDlcEg9xVkbeI6uGnqLLr86GkNJ9nPeAyWnO7wkIeno86z3bI2UwL0lhboGSF2H61BF1mlMNEA32ksQhQuI-JU"
-                alt="Professional headshot of a designer"
+                src="/anhDaiDien.png"
+                alt="Ho Phi Hung"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute -top-6 -left-6 w-full h-full border-2 border-primary/30 rounded-2xl -z-0 hidden md:block" />
-            <div className="absolute -bottom-6 -right-6 md:right-[-20px] bg-[#182430] p-6 rounded-xl border border-white/10 shadow-xl z-20 max-w-[200px]">
-              <p className="text-3xl font-bold text-white mb-1">5+</p>
-              <p className="text-sm text-slate-400">Years of experience in digital product design.</p>
+            <div className="absolute -bottom-6 -right-6 md:right-[-20px] bg-white dark:bg-[#182430] p-6 rounded-xl border border-slate-200 dark:border-white/10 shadow-xl z-20 max-w-[200px]">
+              <p className="text-3xl font-bold text-slate-900 dark:text-white mb-1">5+</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">Years of experience in digital product design.</p>
             </div>
           </div>
           <div className="lg:col-span-7 flex flex-col gap-8 lg:pl-10">
-            <p className="text-lg text-slate-300 leading-relaxed">
+            <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
               I am a multidisciplinary designer with a passion for creating meaningful digital products. I combine
               aesthetic sensibility with user-centered design principles to solve complex problems. My work bridges the
               gap between functional utility and emotional connection.
@@ -56,13 +56,13 @@ export default function About() {
               {skills.map((skill) => (
                 <div
                   key={skill.title}
-                  className="p-6 rounded-lg bg-[#182430] border border-white/5 hover:border-primary/50 transition-colors group"
+                  className="p-6 rounded-lg bg-white dark:bg-[#182430] border border-slate-200 dark:border-white/5 hover:border-primary/50 transition-colors group shadow-sm dark:shadow-none"
                 >
                   <span className="material-symbols-outlined text-3xl text-primary mb-3 group-hover:scale-110 transition-transform block">
                     {skill.icon}
                   </span>
-                  <h4 className="text-white font-bold text-lg mb-2">{skill.title}</h4>
-                  <p className="text-sm text-slate-400">{skill.desc}</p>
+                  <h4 className="text-slate-900 dark:text-white font-bold text-lg mb-2">{skill.title}</h4>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{skill.desc}</p>
                 </div>
               ))}
             </div>

@@ -2,99 +2,82 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const skills = [
-  { label: 'UI/UX Design', percent: 95 },
-  { label: 'Figma & Prototyping', percent: 90 },
-  { label: 'HTML/CSS/Tailwind', percent: 80 },
-  { label: 'User Research', percent: 85 },
+  { label: 'HTML/CSS/JavaScript', percent: 85 },
+  { label: 'ReactJS', percent: 80 },
+  { label: 'MySQL / SQL Server', percent: 75 },
 ]
 
-const skillPills = ['Adobe CC', 'Jira', 'Agile', 'Motion']
+const skillPills = [
+  'Project Management',
+  'Leadership',
+  'Teamwork',
+  'Effective Communication',
+  'Logical & Problem Solving',
+  'Presentation',
+]
 
 const languages = [
-  { name: 'English', level: 'Native' },
-  { name: 'Spanish', level: 'Professional' },
-  { name: 'French', level: 'Conversational' },
+  { name: 'English', level: 'Working' },
+  { name: 'Japanese', level: 'Basic' },
 ]
 
 const jobs = [
   {
-    title: 'Senior Product Designer',
-    company: 'TechFlow Inc.',
-    period: 'Jan 2020 - Present',
+    title: 'Event Support & Open Day Organizer',
+    company: 'Lab Room, Software Engineering Department, FPT University Quy Nhon',
+    period: 'Mar - Apr 2025',
     primary: true,
     bullets: [
-      'Spearheaded the redesign of the core SaaS dashboard, resulting in a 25% increase in user engagement and a 15% reduction in churn.',
-      'Established and maintained the company-wide Design System, improving design-to-development handoff efficiency by 40%.',
-      'Mentored 3 junior designers and facilitated weekly design critique sessions to foster a culture of excellence.',
-      'Collaborated closely with Product Managers to define roadmap priorities based on user research and business goals.',
-    ],
-  },
-  {
-    title: 'UX Designer',
-    company: 'Creative Agency NYC',
-    period: 'Mar 2017 - Dec 2019',
-    primary: false,
-    bullets: [
-      'Designed responsive websites and mobile apps for diverse clients including FinTech, Healthcare, and E-commerce brands.',
-      'Conducted comprehensive user research, including interviews, surveys, and usability testing to validate design decisions.',
-      'Created high-fidelity interactive prototypes in ProtoPie to demonstrate complex interaction models to stakeholders.',
-    ],
-  },
-  {
-    title: 'Junior Web Designer',
-    company: 'StartUp Hub',
-    period: 'Jun 2015 - Feb 2017',
-    primary: false,
-    bullets: [
-      'Assisted in the visual design of marketing materials and landing pages.',
-      'Worked with HTML/CSS to implement design changes on the company website.',
-      'Participated in brainstorming sessions for new product features.',
+      'Supported the organization of Open Day events; coordinated with the team to ensure events ran smoothly and professionally.',
+      'Prepared communication content and interacted directly with guests and students, demonstrating effective communication and teamwork.',
+      'Contributed creative ideas to event activities to improve the participant experience.',
+      'Carried out assigned tasks with a high sense of responsibility, on schedule and with quality.',
     ],
   },
 ]
 
 const certificationsAndAwards = [
   {
-    title: 'Google UX Design Certificate',
+    title: 'Software Development Lifecycle',
     issuer: 'Coursera',
-    issued: 'Aug 2021',
-    icon: 'school',
+    issued: '2024',
+    icon: 'code',
     iconColor: 'text-blue-500',
     hoverIcon: 'verified',
     linkLabel: 'Verify',
   },
   {
-    title: 'Apple Developer Academy',
-    issuer: 'Apple Inc.',
-    issued: 'June 2020',
-    icon: 'laptop_mac',
-    iconColor: 'text-slate-800 dark:text-slate-200',
+    title: 'CertNexus Certified Ethical Emerging Technologist',
+    issuer: 'CertNexus',
+    issued: '2024',
+    icon: 'verified_user',
+    iconColor: 'text-emerald-500',
     hoverIcon: 'verified',
     linkLabel: 'Verify',
   },
   {
-    title: 'Certified Scrum Master (CSM)',
-    issuer: 'Scrum Alliance',
-    issued: 'Mar 2019',
-    icon: 'groups',
+    title: 'Academic Skills for University Success',
+    issuer: 'Coursera',
+    issued: '2024',
+    icon: 'school',
     iconColor: 'text-orange-500',
     hoverIcon: 'verified',
     linkLabel: 'Verify',
   },
   {
-    title: 'Site of the Day',
-    issuer: 'Awwwards',
-    issued: 'Dec 2022',
-    icon: 'emoji_events',
-    iconColor: 'text-yellow-500',
-    hoverIcon: 'emoji_events',
+    title: 'Web Design for Everybody Basics',
+    issuer: 'Coursera',
+    issued: '2024',
+    icon: 'palette',
+    iconColor: 'text-purple-500',
+    hoverIcon: 'verified',
     linkLabel: 'View',
   },
 ]
 
 export default function Resume() {
   useEffect(() => {
-    document.title = 'Alex Morgan - Resume'
+    document.title = 'Ho Phi Hung - Resume'
     return () => {
       document.title = 'Modern Creative Portfolio'
     }
@@ -109,17 +92,18 @@ export default function Resume() {
               <span className="material-symbols-outlined text-2xl">description</span>
             </div>
             <h1 className="font-bold text-lg hidden sm:block">
-              Alex Morgan <span className="text-slate-400 font-normal mx-2">/</span> Resume
+              Ho Phi Hung <span className="text-slate-400 font-normal mx-2">/</span> Resume
             </h1>
           </Link>
           <div className="flex items-center gap-4">
-            <button
-              type="button"
+            <a
+              href="/cv.pdf"
+              download="Ho-Phi-Hung-CV.pdf"
               className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-medium text-sm transition-colors shadow-sm shadow-primary/30"
             >
               <span className="material-symbols-outlined text-sm">download</span>
               <span>Download PDF</span>
-            </button>
+            </a>
           </div>
         </div>
       </header>
@@ -134,10 +118,10 @@ export default function Resume() {
                   <div
                     className="size-40 rounded-full bg-cover bg-center border-4 border-white dark:border-[#1a2634] shadow-lg"
                     style={{
-                      backgroundImage:
-                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuC67nTLXaxQGsI7PsnN_aHvNtfs-JrghYUYwRhjVSCJ_U81I7F6dzFI1XTsuZ1xdaxk82mcxXb8xUS04t7HhMf-7lR7DXB2XDGLmtXljpLpblXXF5HQZZVpo-nU34HC1amxTSkz6E6o9m4UrjWfH3PNPFyUm3PegNrTRoaAyPeMDfMmmJyL_Xm1Y5EpNznVEoNCsDHH3EsPNp9r1vqvgL0K8D9IZTaJwXTSJCo9opqDRk7JBb4ZRuCxeFCCcbaHFrPjxuEW_tf36c4')",
+                      backgroundImage: "url('/anhDaiDien.png')",
                     }}
-                    aria-hidden
+                    role="img"
+                    aria-label="Ảnh đại diện Ho Phi Hung"
                   />
                   <div
                     className="absolute bottom-2 right-2 size-4 bg-green-500 border-2 border-white dark:border-[#1a2634] rounded-full"
@@ -145,8 +129,8 @@ export default function Resume() {
                   />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white leading-tight">Alex Morgan</h2>
-                  <p className="text-primary font-medium mt-1">Senior Product Designer</p>
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white leading-tight">Ho Phi Hung</h2>
+                  <p className="text-primary font-medium mt-1">Software Engineering Student</p>
                 </div>
               </div>
 
@@ -171,7 +155,7 @@ export default function Resume() {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-xs text-slate-400">Phone</span>
-                    <span className="font-medium">+1 (555) 123-4567</span>
+                    <a className="font-medium hover:text-primary transition-colors" href="tel:0339791274">033 979 1274</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
@@ -180,7 +164,7 @@ export default function Resume() {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-xs text-slate-400">Location</span>
-                    <span className="font-medium">New York, USA</span>
+                    <span className="font-medium">Mang Yang, Gia Lai</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
@@ -188,9 +172,9 @@ export default function Resume() {
                     <span className="material-symbols-outlined text-lg">language</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-xs text-slate-400">Website</span>
-                    <a className="font-medium hover:text-primary transition-colors" href="#">
-                      alexmorgan.design
+                    <span className="text-xs text-slate-400">Facebook</span>
+                    <a className="font-medium hover:text-primary transition-colors" href="https://www.facebook.com/hung.hophi.3110/" target="_blank" rel="noopener noreferrer">
+                      facebook.com/hung.hophi.3110
                     </a>
                   </div>
                 </div>
@@ -258,10 +242,10 @@ export default function Resume() {
                   Profile Summary
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-base">
-                  Creative and detail-oriented Senior Product Designer with over 8 years of experience in building
-                  user-centric digital products. I specialize in bridging the gap between design and engineering,
-                  ensuring feasible yet innovative solutions. Proven track record of leading design teams, optimizing
-                  user flows, and delivering award-winning interfaces for SaaS platforms and mobile applications.
+                  Third-year Software Engineering student at FPT University with a solid foundation in web technologies
+                  (HTML/CSS/JS, ReactJS) and databases (MySQL, SQL Server). Experienced in supporting university events
+                  and Open Day coordination. Eager to apply technical and teamwork skills in a professional environment
+                  and continue learning through real-world projects.
                 </p>
               </section>
 
@@ -318,13 +302,13 @@ export default function Resume() {
                       <span className="material-symbols-outlined text-2xl">account_balance</span>
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 dark:text-white text-lg">B.F.A in Interaction Design</h3>
-                      <p className="text-slate-500 font-medium">Parsons School of Design</p>
-                      <p className="text-xs text-slate-400 mt-1">Dean&apos;s List 2013-2015</p>
+                      <h3 className="font-bold text-slate-900 dark:text-white text-lg">Software Engineering</h3>
+                      <p className="text-slate-500 font-medium">FPT University</p>
+                      <p className="text-xs text-slate-400 mt-1">Third year student · GPA: 3.1/4.0</p>
                     </div>
                   </div>
                   <div className="text-sm font-medium px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 text-slate-500 self-start md:self-center">
-                    2011 - 2015
+                    2022 - 2026
                   </div>
                 </div>
               </section>
@@ -382,7 +366,7 @@ export default function Resume() {
         </div>
 
         <footer className="max-w-6xl mx-auto py-8 text-center text-slate-400 text-sm">
-          <p>© 2023 Alex Morgan. All rights reserved.</p>
+          <p>© 2025 Ho Phi Hung. All rights reserved.</p>
         </footer>
       </main>
     </div>

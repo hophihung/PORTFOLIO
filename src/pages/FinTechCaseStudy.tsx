@@ -21,7 +21,7 @@ export default function FinTechCaseStudy() {
               />
             </svg>
           </div>
-          <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">Alex.Design</h2>
+          <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">Hung.Design</h2>
         </Link>
         <div className="flex flex-1 justify-end items-center gap-8">
           <nav className="hidden md:flex items-center gap-9">
