@@ -29,3 +29,30 @@ body {
 #root {
   min-height: 100vh;
 }
+
+/* 404 page */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, #233648 1px, transparent 1px),
+    linear-gradient(to bottom, #233648 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

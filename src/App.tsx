@@ -1,20 +1,13 @@
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import About from './components/About'
-import Work from './components/Work'
-import Contact from './components/Contact'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <div className="bg-background-dark text-slate-200 font-display antialiased selection:bg-primary selection:text-white overflow-x-hidden min-h-screen">
-      <Nav />
-      <main>
-        <Hero />
-        <About />
-        <Work />
-        <Contact />
-      </main>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   )
 }
 
