@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const projects = [
   {
     tags: [
@@ -11,6 +13,7 @@ const projects = [
     image:
       "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLT1Cwuczfb5Y0WB8RQCHVI5FeKQDddBOpjcuKKZ11oyVee6v7T2ehsest2ynO-8pzcgdJuYR7W3q-olcJjD8efPC0HNcNmLPHe4MwqcKde1fPiKsCVijirXarXUqDCUBurNG2AKyZiyhy29YRcZ83Uj81LOzh_1KD9yfTnUu8Eq8Idb_RkRGeJxQValjcEeEbB13ozantrGbx6r5Obq8xq-bpw6o5DDoNu5QqZIiA1YE4ularBwwUetFu9YVclFCbiG7Rn55aF8k')",
     imageFirst: false,
+    caseStudyPath: '/work/fintech-dashboard',
   },
   {
     tags: [
@@ -89,12 +92,21 @@ export default function Work() {
                   ))}
                 </ul>
                 <div className="pt-4">
-                  <a
-                    className="inline-flex items-center text-white font-bold border-b border-white hover:border-primary hover:text-primary pb-1 transition-all"
-                    href="#"
-                  >
-                    View Case Study
-                  </a>
+                  {project.caseStudyPath ? (
+                    <Link
+                      to={project.caseStudyPath}
+                      className="inline-flex items-center text-white font-bold border-b border-white hover:border-primary hover:text-primary pb-1 transition-all"
+                    >
+                      View Case Study
+                    </Link>
+                  ) : (
+                    <a
+                      className="inline-flex items-center text-white font-bold border-b border-white hover:border-primary hover:text-primary pb-1 transition-all"
+                      href="#"
+                    >
+                      View Case Study
+                    </a>
+                  )}
                 </div>
               </div>
               <div className={`lg:col-span-7 ${project.imageFirst ? 'lg:order-1' : 'lg:order-2'}`}>

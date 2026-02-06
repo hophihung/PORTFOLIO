@@ -3,8 +3,13 @@
 @theme {
   --color-primary: #137fec;
   --color-background-dark: #101922;
+  --color-background-light: #f6f7f8;
   --color-surface-dark: #182430;
   --color-surface-darker: #0d141b;
+  --color-text-main-light: #0d141b;
+  --color-text-main-dark: #ffffff;
+  --color-text-muted-light: #4c739a;
+  --color-text-muted-dark: #94a3b8;
   --font-display: "Inter", sans-serif;
   --radius-lg: 0.5rem;
   --radius-xl: 0.75rem;
@@ -55,4 +60,19 @@ body {
 
 .animate-pulse-slow {
   animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
 }
