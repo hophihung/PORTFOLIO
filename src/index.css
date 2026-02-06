@@ -76,3 +76,42 @@ body {
 .animate-fade-in {
   animation: fade-in 0.6s ease-out forwards;
 }
+
+/* Resume page: timeline & scrollbar */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 7px;
+  width: 2px;
+  background-color: #e2e8f0;
+  z-index: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .timeline-line::before {
+    background-color: #334155;
+  }
+}
+
+.dark .timeline-line::before {
+  background-color: #334155;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
