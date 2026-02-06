@@ -39,16 +39,22 @@ const projects = [
   },
   {
     tags: [
-      { label: 'Branding', class: 'bg-pink-500/10 text-pink-400' },
-      { label: 'Web Design', class: 'bg-yellow-500/10 text-yellow-400' },
+      { label: 'AI EdTech', class: 'bg-violet-500/10 text-violet-400' },
+      { label: 'OpenAI Integration', class: 'bg-indigo-500/10 text-indigo-400' },
+      { label: 'Next.js App Router', class: 'bg-purple-500/10 text-purple-400' },
     ],
-    title: 'Lumina Identity',
+    title: 'Japalyze',
     description:
-      'A complete rebrand and website overhaul for a leading lighting architecture firm, focusing on minimalism and photography.',
-    bullets: ['Brand guidelines & design system', 'Award-winning website layout'],
+      'Nền tảng học tiếng Nhật tích hợp AI: phân tích ngữ pháp chuyên sâu, tự động tạo Flashcard từ bài học và luyện hội thoại Role-play với AI. Tech: Next.js (App Router), TypeScript, OpenAI API, Prisma, Tailwind CSS.',
+    bullets: [
+      'AI Role-play: Luyện hội thoại thực tế ảo',
+      'Auto-gen Flashcards: Tạo thẻ học tự động từ nội dung bài',
+      'Grammar Analysis: Phân tích cấu trúc câu bằng AI',
+    ],
     image:
-      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlNWcMZxghwWC5fFBOS1ODz7VYf7LFttGmdsP11jXpGg3wZRH0SmP32M2SR-m3_ZW6vAhnb3YWGeNuJRbA4_BNuW8umxh26LotHL3uAw2bm222AD71I-_KDm6QCLpqdFRPu2xhYxLm7kJ4bQXUY-djHOLeskj1D0iK-xpoUUvmEvFP8rwQAtKuQAZ_hUwyzBQFMlpC2u1nhUbSMeX54Xbv-oWQRuM9c4RDpC2xv0Uva383q63r3UE4inG_ip3jjhjOibaCECqOmSc')",
+      "url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80')",
     imageFirst: false,
+    caseStudyPath: '/work/japalyze',
   },
 ]
 
