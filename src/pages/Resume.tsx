@@ -160,8 +160,8 @@ export default function Resume() {
                   </div>
                   <div className="flex flex-col">
                     <span className="text-xs text-slate-400">Email</span>
-                    <a className="font-medium hover:text-primary transition-colors" href="mailto:alex@example.com">
-                      alex@example.com
+                    <a className="font-medium hover:text-primary transition-colors" href="mailto:hophihunghh123@gmail.com">
+                      hophihunghh123@gmail.com
                     </a>
                   </div>
                 </div>

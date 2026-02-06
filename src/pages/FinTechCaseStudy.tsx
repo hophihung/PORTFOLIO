@@ -449,14 +449,21 @@ export default function FinTechCaseStudy() {
             Get in Touch
           </Link>
           <div className="flex justify-center gap-6 mt-8">
-            <a href="#" className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors">
+            <a
+              href="https://www.linkedin.com/in/h%C3%B9ng-h%E1%BB%93-phi-4015052b7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+            >
               LinkedIn
             </a>
-            <a href="#" className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors">
-              Twitter
-            </a>
-            <a href="#" className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors">
-              Dribbble
+            <a
+              href="https://www.facebook.com/hung.hophi.3110/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-muted-light dark:text-text-muted-dark hover:text-primary transition-colors"
+            >
+              Facebook
             </a>
           </div>
           <p className="text-sm text-text-muted-light dark:text-text-muted-dark mt-8">
