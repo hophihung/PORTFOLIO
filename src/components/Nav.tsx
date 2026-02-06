@@ -3,7 +3,7 @@ import ThemeToggle from './ThemeToggle'
 
 export default function Nav() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/80 dark:bg-[#101922]/80 border-b border-slate-200/80 dark:border-white/5">
+    <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/80 dark:bg-background-dark/80 border-b border-slate-200/80 dark:border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <div className="size-8 bg-primary rounded-lg flex items-center justify-center text-white">

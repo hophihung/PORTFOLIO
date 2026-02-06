@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
+import ThemeToggle from '../components/ThemeToggle'
 
 export default function NotFound() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col bg-[#f6f7f8] dark:bg-background-dark text-slate-900 dark:text-white overflow-x-hidden antialiased" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
+    <div className="relative flex min-h-screen w-full flex-col bg-[#f6f7f8] dark:bg-background-dark text-slate-900 dark:text-white overflow-x-hidden antialiased transition-colors duration-200" style={{ fontFamily: '"Space Grotesk", sans-serif' }}>
       <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#233648] px-6 lg:px-10 py-4 bg-[#f6f7f8]/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
         <Link to="/" className="flex items-center gap-4 text-slate-900 dark:text-white">
           <div className="size-8 text-[#3994ef]">
@@ -22,12 +23,15 @@ export default function NotFound() {
           </div>
           <h2 className="text-xl font-bold leading-tight tracking-tight">Portfolio</h2>
         </Link>
-        <Link
-          to="/#contact"
-          className="hidden sm:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-6 bg-[#3994ef] hover:bg-[#3994ef]/90 transition-colors text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-[#3994ef]/20"
-        >
-          <span className="truncate">Contact</span>
-        </Link>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Link
+            to="/#contact"
+            className="hidden sm:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-6 bg-[#3994ef] hover:bg-[#3994ef]/90 transition-colors text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-[#3994ef]/20"
+          >
+            <span className="truncate">Contact</span>
+          </Link>
+        </div>
       </header>
 
       <main className="relative flex flex-1 flex-col items-center justify-center p-4 lg:p-10 w-full overflow-hidden">

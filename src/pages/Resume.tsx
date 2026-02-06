@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import ThemeToggle from '../components/ThemeToggle'
 
 const skills = [
   { label: 'HTML/CSS/JavaScript', percent: 85 },
@@ -95,7 +96,8 @@ export default function Resume() {
               Ho Phi Hung <span className="text-slate-400 font-normal mx-2">/</span> Resume
             </h1>
           </Link>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
             <a
               href="/cv.pdf"
               download="Ho-Phi-Hung-CV.pdf"

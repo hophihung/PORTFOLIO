@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import ThemeToggle from '../components/ThemeToggle'
 
 export default function FinTechCaseStudy() {
   useEffect(() => {
@@ -23,7 +24,8 @@ export default function FinTechCaseStudy() {
           </div>
           <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">Hung.Design</h2>
         </Link>
-        <div className="flex flex-1 justify-end items-center gap-8">
+        <div className="flex flex-1 justify-end items-center gap-6">
+          <ThemeToggle />
           <nav className="hidden md:flex items-center gap-9">
             <Link to="/#work" className="text-sm font-medium hover:text-primary transition-colors">
               Work

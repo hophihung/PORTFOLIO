@@ -118,16 +118,16 @@ const projects = [
 
 export default function Work() {
   return (
-    <section className="py-24 px-6 bg-[#101922] relative overflow-hidden" id="work">
-      <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+    <section className="py-24 px-6 bg-slate-200/50 dark:bg-[#101922] relative overflow-hidden transition-colors duration-200" id="work">
+      <div className="absolute top-0 right-0 w-full h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-white/10 to-transparent" />
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-20">
           <div className="max-w-2xl">
             <h2 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">Selected Work</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Recent Projects</h3>
+            <h3 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">Recent Projects</h3>
           </div>
           <a
-            className="hidden md:flex items-center gap-2 text-white hover:text-primary font-medium transition-colors"
+            className="hidden md:flex items-center gap-2 text-slate-700 dark:text-white hover:text-primary font-medium transition-colors"
             href="#"
           >
             View all projects <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -152,11 +152,11 @@ export default function Work() {
                     </span>
                   ))}
                 </div>
-                <h4 className="text-3xl md:text-4xl font-bold text-white group-hover:text-primary transition-colors">
+                <h4 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
                   {project.title}
                 </h4>
-                <p className="text-slate-400 text-lg leading-relaxed">{project.description}</p>
-                <ul className="flex flex-col gap-2 text-slate-300 text-sm">
+                <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">{project.description}</p>
+                <ul className="flex flex-col gap-2 text-slate-600 dark:text-slate-300 text-sm">
                   {project.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-center gap-2">
                       <span className="material-symbols-outlined text-primary text-base">check_circle</span>
@@ -168,13 +168,13 @@ export default function Work() {
                   {project.caseStudyPath ? (
                     <Link
                       to={project.caseStudyPath}
-                      className="inline-flex items-center text-white font-bold border-b border-white hover:border-primary hover:text-primary pb-1 transition-all"
+                      className="inline-flex items-center text-slate-900 dark:text-white font-bold border-b border-slate-400 dark:border-white hover:border-primary hover:text-primary pb-1 transition-all"
                     >
                       View Case Study
                     </Link>
                   ) : (
                     <a
-                      className="inline-flex items-center text-white font-bold border-b border-white hover:border-primary hover:text-primary pb-1 transition-all"
+                      className="inline-flex items-center text-slate-900 dark:text-white font-bold border-b border-slate-400 dark:border-white hover:border-primary hover:text-primary pb-1 transition-all"
                       href="#"
                     >
                       View Case Study
@@ -183,7 +183,7 @@ export default function Work() {
                 </div>
               </div>
               <div className={`lg:col-span-7 ${project.imageFirst ? 'lg:order-1' : 'lg:order-2'}`}>
-                <div className="rounded-xl overflow-hidden bg-[#182430] border border-white/5 aspect-video relative group-hover:shadow-[0_20px_50px_rgba(19,127,236,0.15)] transition-all duration-500 transform group-hover:-translate-y-2">
+                <div className="rounded-xl overflow-hidden bg-slate-300/80 dark:bg-[#182430] border border-slate-200 dark:border-white/5 aspect-video relative group-hover:shadow-[0_20px_50px_rgba(19,127,236,0.15)] transition-all duration-500 transform group-hover:-translate-y-2">
                   <div
                     className="absolute inset-0 bg-cover bg-center group-hover:bg-transparent transition-colors"
                     style={{ backgroundImage: project.image }}
@@ -196,7 +196,7 @@ export default function Work() {
         </div>
         <div className="mt-12 text-center md:hidden">
           <a
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/20 text-white font-medium hover:bg-white/5"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-slate-300 dark:border-white/20 text-slate-700 dark:text-white font-medium hover:bg-slate-300/50 dark:hover:bg-white/5"
             href="#"
           >
             View all projects <span className="material-symbols-outlined text-sm">arrow_forward</span>

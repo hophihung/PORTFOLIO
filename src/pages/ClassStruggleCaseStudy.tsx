@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import ThemeToggle from '../components/ThemeToggle'
 
 const LIVE_DEMO_URL = 'https://dau-tranh-giai-cap-blond.vercel.app/'
 const GITHUB_URL = 'https://github.com/otisdoan/dau-tranh-giai-cap'
@@ -31,9 +32,9 @@ export default function ClassStruggleCaseStudy() {
   }, [])
 
   return (
-    <div className="bg-[#101922] text-slate-300 font-display min-h-screen">
-      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-slate-700/50 bg-[#101922]/90 backdrop-blur-md px-6 lg:px-10 py-3">
-        <Link to="/" className="flex items-center gap-4 text-white">
+    <div className="bg-background-light dark:bg-[#101922] text-slate-700 dark:text-slate-300 font-display min-h-screen transition-colors duration-200">
+      <header className="sticky top-0 z-50 flex items-center justify-between border-b border-slate-200 dark:border-slate-700/50 bg-white/90 dark:bg-[#101922]/90 backdrop-blur-md px-6 lg:px-10 py-3">
+        <Link to="/" className="flex items-center gap-4 text-slate-900 dark:text-white">
           <div className="size-8 text-primary">
             <svg className="w-full h-full" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -44,7 +45,8 @@ export default function ClassStruggleCaseStudy() {
           </div>
           <h2 className="text-lg font-bold leading-tight tracking-tight">Portfolio</h2>
         </Link>
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-6">
+          <ThemeToggle />
           <nav className="hidden md:flex items-center gap-9">
             <Link to="/#work" className="text-sm font-medium text-slate-400 hover:text-primary transition-colors">
               Work
