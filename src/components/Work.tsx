@@ -95,6 +95,25 @@ const projects = [
     imageFirst: false,
     caseStudyPath: '/work/cellphones-clone',
   },
+  {
+    tags: [
+      { label: 'EdTech', class: 'bg-rose-500/10 text-rose-400' },
+      { label: 'Next.js', class: 'bg-purple-500/10 text-purple-400' },
+      { label: 'Interactive Learning', class: 'bg-amber-500/10 text-amber-400' },
+    ],
+    title: 'Class Struggle (Đấu tranh giai cấp)',
+    description:
+      'Ứng dụng web giáo dục tương tác, giúp đơn giản hóa các khái niệm triết học và chính trị phức tạp qua giao diện trực quan. Tech: Next.js (App Router), Geist Font, Tailwind CSS, Vercel.',
+    bullets: [
+      'Tối ưu trải nghiệm đọc với font Geist (Vercel)',
+      'Giao diện Interactive Learning tăng hứng thú học tập',
+      'Hiệu suất cao nhờ Next.js App Router',
+    ],
+    image:
+      "url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&q=80')",
+    imageFirst: true,
+    caseStudyPath: '/work/class-struggle',
+  },
 ]
 
 export default function Work() {
