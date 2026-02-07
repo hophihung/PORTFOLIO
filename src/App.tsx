@@ -7,6 +7,7 @@ import JapalyzeCaseStudy from './pages/JapalyzeCaseStudy'
 import FIELTSCaseStudy from './pages/FIELTSCaseStudy'
 import CellphonesCaseStudy from './pages/CellphonesCaseStudy'
 import ClassStruggleCaseStudy from './pages/ClassStruggleCaseStudy'
+import TVLanding from './pages/TVLanding'
 import Resume from './pages/Resume'
 import NotFound from './pages/NotFound'
 
@@ -21,6 +22,7 @@ function App() {
       <Route path="/work/f-ielts" element={<FIELTSCaseStudy />} />
       <Route path="/work/cellphones-clone" element={<CellphonesCaseStudy />} />
       <Route path="/work/class-struggle" element={<ClassStruggleCaseStudy />} />
+      <Route path="/tv" element={<TVLanding />} />
       <Route path="/resume" element={<Resume />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
