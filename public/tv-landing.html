@@ -85,6 +85,8 @@
       ];
       var total = projects.length;
       var index = 0;
+      var autoAdvanceTimer = null;
+      var INTERVAL_MS = 10000; // 10 giây
 
       var elQr = document.getElementById('slide-qr');
       var elTitle = document.getElementById('slide-title');
@@ -93,6 +95,13 @@
       var elTotal = document.getElementById('total-num');
 
       elTotal.textContent = total;
+
+      function startAutoAdvance() {
+        if (autoAdvanceTimer) clearInterval(autoAdvanceTimer);
+        autoAdvanceTimer = setInterval(function () {
+          showSlide(index + 1);
+        }, INTERVAL_MS);
+      }
 
       function showSlide(i) {
         index = ((i % total) + total) % total;
@@ -103,6 +112,7 @@
         elLink.href = p.url;
         elLink.textContent = p.url.replace(/^https:\/\//, '').replace(/\/$/, '');
         elCurrent.textContent = index + 1;
+        startAutoAdvance();
       }
 
       document.getElementById('btn-prev').addEventListener('click', function () { showSlide(index - 1); });
