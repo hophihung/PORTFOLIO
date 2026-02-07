@@ -17,6 +17,16 @@ export default function Nav() {
           <a className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#work">Work</a>
           <a className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#about">About</a>
           <Link to="/resume" className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">Resume</Link>
+          <a
+            href="/tv-landing.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"
+            title="TV Presentation"
+          >
+            <span className="material-symbols-outlined text-xl">tv</span>
+            <span>TV</span>
+          </a>
           <ThemeToggle />
           <a
             className="px-5 py-2.5 rounded-full bg-primary hover:bg-blue-600 text-white text-sm font-bold transition-all shadow-[0_0_15px_rgba(19,127,236,0.3)] hover:shadow-[0_0_25px_rgba(19,127,236,0.5)]"
